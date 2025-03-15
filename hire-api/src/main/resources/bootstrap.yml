@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 23.95.16.6:18848
+        password: 7sghcnTSajdyJakdsfuohbnjk@^*
+        file-extension: yaml
+        #这个配置可以追加多个nacos配置文件
+        extension-configs:
+          - data-id: jwt_config.yaml
+            group: DEFAULT_GROUP
+            refresh: true #动态刷新配置

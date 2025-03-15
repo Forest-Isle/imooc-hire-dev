@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: company-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 23.95.16.6:18848
+        password: 7sghcnTSajdyJakdsfuohbnjk@^*
+        namespace: 5ec8c4c8-23c6-4b4f-a0f3-003a673f8342
+        group: dev
+        prefix: company-service
+        file-extension: yaml

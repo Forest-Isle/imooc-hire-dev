@@ -1,0 +1,39 @@
+server:
+  port: 8000
+spring:
+  cloud:
+    nacos:
+      server-addr: 23.95.16.6:18848
+      password: 7sghcnTSajdyJakdsfuohbnjk@^*
+    gateway:
+      discovery:
+        locator:
+          enabled: true #动态路由，从注册中心根据微服务的名字获得目标节点
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path= /user/**, /admininfo/**
+        - id: company-service
+          uri: lb://company-service
+          predicates:
+            - Path= /company/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path= /auth/**, /passport/**, /saas/**, /admin/**
+        - id: resource-service
+          uri: lb://resource-service
+          predicates:
+            - Path= /resource/**
+        - id: work-service
+          uri: lb://work-service
+          predicates:
+            - Path= /resume/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allow-credentials: true
+            allowed-headers: "*"
+            allowed-methods: "*"
+            allowed-origin-patterns: "*"

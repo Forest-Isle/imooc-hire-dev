@@ -1,0 +1,6 @@
+spring:
+  redis:
+    host: 23.95.16.6
+    password: imooc
+    port: 6379
+    database: 0

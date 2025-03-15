@@ -1,0 +1,5 @@
+server:
+  port: 8001
+  tomcat:
+    uri-encoding: utf-8
+    max-swallow-size: -1

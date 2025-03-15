@@ -1,0 +1,18 @@
+spring:
+  redis:
+    host: 23.95.16.6
+    password: imooc
+    port: 6379
+    database: 0
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 15816098262@qq.com   # 你的邮箱
+    password: bkapksfmzkaqdfja # 你的授权码（不是邮箱密码）
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

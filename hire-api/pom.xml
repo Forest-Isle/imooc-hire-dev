@@ -20,9 +20,10 @@
     <dependencies>
         <dependency>
             <groupId>com.senyu</groupId>
-            <artifactId>hire-common</artifactId>
+            <artifactId>hire-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 </project>

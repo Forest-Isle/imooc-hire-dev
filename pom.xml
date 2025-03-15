@@ -10,7 +10,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.3</version>
+        <version>2.6.11</version>
+        <relativePath/>
     </parent>
     <modules>
         <module>hire-common</module>
@@ -18,10 +19,32 @@
         <module>hire-api</module>
         <module>service-user-7001</module>
         <module>service-company-6001</module>
+        <module>gateway-8000</module>
+        <module>auth-service-8111</module>
+        <module>rabbit-consumer</module>
+        <module>rabbit-producer</module>
+        <module>service-resource-4001</module>
+        <module>service-work-3001</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2021.0.4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2021.0.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- mysql 驱动 -->
             <dependency>
                 <groupId>mysql</groupId>

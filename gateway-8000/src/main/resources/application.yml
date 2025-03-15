@@ -1,0 +1,20 @@
+spring:
+  redis:
+    host: 23.95.16.6
+    password: imooc
+    port: 6379
+    database: 0
+  application:
+    name: gateway-service
+  profiles:
+    active: dev
+
+#配置日志级别
+logging:
+  level:
+    root: info
+
+blackIP:
+  continueCount: ${counts:3} #ip连续的请求次数
+  timeInterval: ${interval:20} #ip判断的时间间隔
+  limitTimes: ${times:30} #限制的时间 单位：s
